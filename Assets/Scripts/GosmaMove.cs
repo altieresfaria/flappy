@@ -9,9 +9,6 @@ public class GosmaMove : MonoBehaviour {
     public float max;
     public float espera;
     public float vel;
-    public float limite;
-    public float retorno;
-
 
 
     void Start()
@@ -38,11 +35,6 @@ public class GosmaMove : MonoBehaviour {
         Vector3 velocidadeVetorial = new Vector3(-1f, 0f, 0f) * vel;
 
         transform.position = transform.position + velocidadeVetorial * Time.deltaTime;
-
-        if (transform.position.y <= limite)
-        {
-            transform.position = new Vector3(retorno, transform.position.x, transform.position.y);
-        }
 
     }
 
